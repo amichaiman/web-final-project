@@ -47,6 +47,8 @@ function startGame() {
             nickname.animate({backgroundColor: 'white'}, 700);
        }, 1000);
     } else {
-        location.href = "game.html?cameFrom=login";
+        sessionStorage.cameFrom='login';
+        sessionStorage.name=nickname.val();
+        location.href = 'game.html';
     }
 }
